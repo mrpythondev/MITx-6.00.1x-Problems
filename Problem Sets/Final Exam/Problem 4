@@ -1,0 +1,47 @@
+Problem 4
+15.0/15.0 points (graded)
+Implement a function that meets the specifications below.
+
+def max_val(t): 
+    """ t, tuple or list
+        Each element of t is either an int, a tuple, or a list
+        No tuple or list is empty
+        Returns the maximum int in t or (recursively) in an element of t """ 
+    # Your code here
+For example,
+
+max_val((5, (1,2), [[1],[2]])) returns 5.
+max_val((5, (1,2), [[1],[9]])) returns 9.
+Paste your entire function, including the definition, in the box below. Do not leave any debugging print statements.
+
+def max_val(t):
+        """ t, tuple or list
+        Each element of t is either an int, a tuple, or a list
+        No tuple or list is empty
+        Returns the maximum int in t or (recursively) in an element of t """ 
+        top_val = []
+        for element in t:
+            if type(element) == type(1):
+                    top_val.append(element)
+            elif type(element) == type(list) or type(tuple):
+                for element2 in element:
+                    if type(element2) == type(1):
+                        top_val.append(element2)
+                    elif type(element2) == type(list) or type(tuple):
+                        for element3 in element2:
+                            if type(element3) == type(1):
+                                top_val.append(element3)
+                            elif type(element) == type(list) or type(tuple):
+                                for element4 in element3:
+                                    if type(element4) == type(1):
+                                        top_val.append(element4)
+                                    elif type(element4) == type(list) or type(tuple):
+                                        for element5 in element4:
+                                            if type(element5) == type(1):
+                                                top_val.append(element5)
+                                            elif type(element5) == type(list) or type(tuple):
+                                                for element6 in element5:
+                                                    if type(element6) == type(1):
+                                                        top_val.append(element6)
+                                    
+        return max(top_val)    

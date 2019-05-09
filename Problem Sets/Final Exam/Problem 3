@@ -1,0 +1,24 @@
+Problem 3
+10.0/10.0 points (graded)
+Implement a function that meets the specifications below.
+
+def sum_digits(s):
+    """ assumes s a string
+        Returns an int that is the sum of all of the digits in s.
+          If there are no digits in s it raises a ValueError exception. """
+    # Your code here
+For example, sum_digits("a;35d4") returns 12.
+
+Paste your entire function, including the definition, in the box below. Do not leave any debugging print statements.
+
+def sum_digits(s):
+    total = 0
+    non_ints = 0
+    for letter in s:
+            try:
+                total += int(letter)
+            except ValueError:
+                non_ints += 1
+    if len(s) == non_ints:
+        raise ValueError
+    return total
