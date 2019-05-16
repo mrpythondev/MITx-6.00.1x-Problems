@@ -1,5 +1,4 @@
 # MITx-6.00.1x-Problems
----
 About
 ---
 This package contains the MITx 6.00.01x problems and solutions. These solutions are should be used to learn from and not just plagiarized. MITx 6.00.01x repository contains all of the standard problem sets, midterm, and final solutions.  
